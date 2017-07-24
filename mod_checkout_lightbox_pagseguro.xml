@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="module" group="" method="upgrade">
+	<name>MOD_LIGHTBOXPAGSEGURO</name>
+	<version>1.0.0</version>
+	<creationDate>04 August 2017</creationDate>
+	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
+	<copyright>2017 Deividson</copyright>
+	<author>Deividson Damasio (http://deividson.net)</author>
+	<authorEmail>developer@deividson.net</authorEmail>
+	<authorUrl>http://deividson.net</authorUrl>
+	<description>MOD_LIGHTBOXPAGSEGURO_XML_DESCRIPTION</description>
+	<files>
+		<filename module="mod_checkout_lightbox_pagseguro">helper.php</filename>
+		<filename module="mod_checkout_lightbox_pagseguro">index.html</filename>
+		<filename module="mod_checkout_lightbox_pagseguro">mod_checkout_lightbox_pagseguro.php</filename>
+		<filename module="mod_checkout_lightbox_pagseguro">mod_checkout_lightbox_pagseguro.xml</filename>
+		<folder module="mod_checkout_lightbox_pagseguro">fields</folder>
+		<folder module="mod_checkout_lightbox_pagseguro">tmpl</folder>
+	</files>
+	<media folder="media/mod_checkout_lightbox_pagseguro" destination="mod_checkout_lightbox_pagseguro">
+		<filename>index.html</filename>
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+	</media>
+	<updateservers>
+		<server type="extension" priority="1" name="MOD_LIGHTBOXPAGSEGURO">https://deividsondeveloper.s3.amazonaws.com/joomla/mod_checkout_lightbox_pagseguro.xml</server>
+	</updateservers>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_checkout_lightbox_pagseguro.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_checkout_lightbox_pagseguro.sys.ini</language>
+		<language tag="pt-BR">language/pt-BR/pt-BR.mod_checkout_lightbox_pagseguro.ini</language>
+		<language tag="pt-BR">language/pt-BR/pt-BR.mod_checkout_lightbox_pagseguro.sys.ini</language>
+	</languages>
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_checkout_lightbox_pagseguro/fields">
+			<fieldset name="basic">
+				<field
+					name="instructions"
+					type="note"
+					label="MOD_LIGHTBOXPAGSEGURO_INSTRUCTIONS_LABEL"
+					description="MOD_LIGHTBOXPAGSEGURO_INSTRUCTIONS_DESC"
+				/>
+				<field
+					name="note1"
+					type="note"
+					class="alert alert-info"
+					label="MOD_LIGHTBOXPAGSEGURO_NOTE1_LABEL"
+					description="MOD_LIGHTBOXPAGSEGURO_NOTE1_DESC"
+				/>
+				<field
+					name="sandbox_mode"
+					type="radio"
+					label="MOD_LIGHTBOXPAGSEGURO_SANDBOX_MODE_LABEL"
+					description="MOD_LIGHTBOXPAGSEGURO_SANDBOX_MODE_DESC"
+					default="1"
+					class="btn-group btn-group-yesno"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="email"
+					type="email"
+					label="MOD_LIGHTBOXPAGSEGURO_EMAIL_LABEL"
+					description="MOD_LIGHTBOXPAGSEGURO_EMAIL_DESC"
+					required="true"
+					maxlength="60"
+					validate="email"
+				/>
+				<field
+					name="token"
+					type="text"
+					label="MOD_LIGHTBOXPAGSEGURO_TOKEN_LABEL"
+					description="MOD_LIGHTBOXPAGSEGURO_TOKEN_DESC"
+					required="true"
+					maxlength="32"
+				/>
+				<field
+					name="note2"
+					type="note"
+					class="alert alert-info"
+					label="MOD_LIGHTBOXPAGSEGURO_NOTE2_LABEL"
+					description="MOD_LIGHTBOXPAGSEGURO_NOTE2_DESC"
+				/>
+				<field
+					name="show_product_code"
+					type="radio"
+					label="MOD_LIGHTBOXPAGSEGURO_SHOW_PRODUCT_CODE_LABEL"
+					description="MOD_LIGHTBOXPAGSEGURO_SHOW_PRODUCT_CODE_DESC"
+					default="0"
+					class="btn-group btn-group-yesno"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="product_code"
+					type="text"
+					label="MOD_LIGHTBOXPAGSEGURO_PRODUCT_CODE_LABEL"
+					description="MOD_LIGHTBOXPAGSEGURO_PRODUCT_CODE_DESC"
+					required="true"
+					maxlength="100"
+				/>
+				<field
+					name="product_name"
+					type="text"
+					label="MOD_LIGHTBOXPAGSEGURO_PRODUCT_NAME_LABEL"
+					description="MOD_LIGHTBOXPAGSEGURO_PRODUCT_NAME_DESC"
+					required="true"
+					maxlength="100"
+				/>
+				<field
+					name="product_description"
+					type="editor"
+					label="MOD_LIGHTBOXPAGSEGURO_PRODUCT_DESCRIPTION_LABEL"
+					description="MOD_LIGHTBOXPAGSEGURO_PRODUCT_DESCRIPTION_DESC"
+					height="100"
+					filter="safehtml"
+				/>
+				<field
+					name="show_quantity"
+					type="radio"
+					label="MOD_LIGHTBOXPAGSEGURO_SHOW_QUANTITY_LABEL"
+					description="MOD_LIGHTBOXPAGSEGURO_SHOW_QUANTITY_DESC"
+					default="1"
+					class="btn-group btn-group-yesno"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="quantity"
+					type="onlynumber"
+					label="MOD_LIGHTBOXPAGSEGURO_QUANTITY_LABEL"
+					description="MOD_LIGHTBOXPAGSEGURO_QUANTITY_DESC"
+					required="true"
+					default="1"
+					maxlength="3"
+				/>
+				<field
+					name="amount"
+					type="currencybrl"
+					label="MOD_LIGHTBOXPAGSEGURO_AMOUNT_LABEL"
+					description="MOD_LIGHTBOXPAGSEGURO_AMOUNT_DESC"
+					required="true"
+					maxlength="10"
+				/>
+				<field
+					name="weight"
+					type="onlynumber"
+					label="MOD_LIGHTBOXPAGSEGURO_WEIGHT_LABEL"
+					description="MOD_LIGHTBOXPAGSEGURO_WEIGHT_DESC"
+					maxlength="5"
+				/>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

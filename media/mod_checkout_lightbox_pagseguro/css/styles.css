@@ -1,0 +1,17 @@
+/**
+ * @package Checkout Lightbox with PagSeguro
+ * @author Deividson Damasio
+ * @copyright 2017 Deividson (deividson.net)
+ * @license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
+ */
+ 
+.pagseguro.btpay {
+    width: 205px;
+    height: 30px;
+    background: transparent url(../images/pay.gif) no-repeat center center;
+    border: none;
+}
+
+.quantity {
+	width: 25px;
+}
