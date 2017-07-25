@@ -1,4 +1,4 @@
 
 # Checkout Lightbox com PagSeguro
 
-Módulo "Checkout Lightbox com PagSeguro" desenvolvido para Joomla.
+Module "Checkout Lightbox com PagSeguro" developer for Joomla.
