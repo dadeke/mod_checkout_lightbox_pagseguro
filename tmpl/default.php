@@ -50,7 +50,7 @@ defined('_JEXEC') or die;
 </div>
 <input id="buttonpay<?php echo $module->id; ?>"
 	type="button" class="pagseguro btpay"
-	onclick="ProcessarPagamento('<?php echo $module->id; ?>');" />
+	onclick="ProcessarPagSeguro('<?php echo $module->id; ?>', '<?php echo $menu_itemid; ?>');" />
 <img id="loading_gif<?php echo $module->id; ?>"
 	src="media/mod_checkout_lightbox_pagseguro/images/loading.gif"
 	alt="loading.gif"

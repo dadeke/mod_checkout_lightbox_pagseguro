@@ -81,7 +81,7 @@ function formatacao(valor, mascara, alinhamento) {
 }
 
 /* Funções para o pagamento. */
-function ProcessarPagamento(id) {
+function ProcessarPagSeguro(id, menu_itemid) {
 	var button_id = '#buttonpay' + id;
 	var loading_gif = '#loading_gif' + id;
 	var message_error = '#message_error' + id;
@@ -91,7 +91,8 @@ function ProcessarPagamento(id) {
 		module: "checkout_lightbox_pagseguro",
 		format: "json",
 		method: "gettokencheckout",
-		id: id
+		id: id,
+		Itemid: menu_itemid
 	};
 
 	jQuery(button_id).prop('disabled', true);

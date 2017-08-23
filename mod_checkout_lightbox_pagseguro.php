@@ -34,5 +34,8 @@ $show_quantity = $params->get('show_quantity');
 $quantity = $params->get('quantity');
 $amount = $params->get('amount');
 
+$app = JFactory::getApplication();
+$menu_itemid = $app->getMenu()->getActive()->id;
+
 require JModuleHelper::getLayoutPath('mod_checkout_lightbox_pagseguro', $params->get('layout', 'default'));
 ?>
