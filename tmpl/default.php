@@ -8,7 +8,7 @@
 defined('_JEXEC') or die;
 
 ?>
-<div id="message_error<?php echo $module->id; ?>" class="alert alert-danger hide"></div>
+<div id="message_div<?php echo $module->id; ?>" class="alert alert-danger hide"></div>
 <div class="control-group">
 	<div class="control-label">
 		<h3><?php echo $product_name; ?></h3>
@@ -55,3 +55,6 @@ defined('_JEXEC') or die;
 	src="media/mod_checkout_lightbox_pagseguro/images/loading.gif"
 	alt="loading.gif"
 	class="hide" />
+<input id="url_pagseguro<?php echo $module->id; ?>"
+	type="hidden"
+	value="<?php echo $url_pagseguro; ?>" />

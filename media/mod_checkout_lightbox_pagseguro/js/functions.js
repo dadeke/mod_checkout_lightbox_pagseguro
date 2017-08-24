@@ -82,9 +82,9 @@ function formatacao(valor, mascara, alinhamento) {
 
 /* Funções para o pagamento. */
 function ProcessarPagSeguro(id, menu_itemid) {
-	var button_id = '#buttonpay' + id;
-	var loading_gif = '#loading_gif' + id;
-	var message_error = '#message_error' + id;
+	var buttonpay = jQuery('#buttonpay' + id);
+	var loading_gif = jQuery('#loading_gif' + id);
+	var message_div = jQuery('#message_div' + id);
 	var quantity = jQuery('#quantity' + id).val();
 	var url = 'index.php?option=com_ajax';
 	var dataPost = {
@@ -95,10 +95,10 @@ function ProcessarPagSeguro(id, menu_itemid) {
 		Itemid: menu_itemid
 	};
 
-	jQuery(button_id).prop('disabled', true);
-	jQuery(loading_gif).attr('class', '');
-	jQuery(message_error).html('');
-	jQuery(message_error).attr('class', 'alert alert-danger hide');
+	buttonpay.prop('disabled', true);
+	loading_gif.attr('class', '');
+	message_div.html('');
+	message_div.attr('class', 'alert alert-danger hide');
 
 	if(quantity) {
 		dataPost.quantity = quantity;
@@ -111,16 +111,25 @@ function ProcessarPagSeguro(id, menu_itemid) {
 		data: dataPost,
 		success: function(result) {
 			if(result.success) {
-				PagSeguroLightbox(result.data[0]);
+				MostrarPagSeguroLightbox(id, result.data[0]);
 			}
 			else {
-				jQuery(message_error).html(result.message);
-				jQuery(message_error).attr('class', 'alert alert-danger');
+				message_div.html(result.message);
+				message_div.attr('class', 'alert alert-danger');
 			}
 		},
 		complete: function() {
-			jQuery(loading_gif).attr('class', 'hide');
-			jQuery(button_id).prop('disabled', false);
+			loading_gif.attr('class', 'hide');
+			buttonpay.prop('disabled', false);
 		}
 	});
+}
+
+function MostrarPagSeguroLightbox(id, code) {
+	var isOpenLightbox = PagSeguroLightbox(code);
+
+	// Redireciona a página caso o navegador não tenha suporte ao Lightbox.
+	if(!isOpenLightbox) {
+		location.href = "https://" + jQuery('#url_pagseguro' + id).val() + "/v2/checkout/payment.html?code=" + code;
+	}
 }
