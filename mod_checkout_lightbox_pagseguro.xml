@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.0" type="module" group="" method="upgrade">
 	<name>MOD_LIGHTBOXPAGSEGURO</name>
-	<version>1.0.4</version>
-	<creationDate>10 September 2017</creationDate>
+	<version>1.0.5</version>
+	<creationDate>21 September 2017</creationDate>
 	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
 	<copyright>2017 Deividson</copyright>
 	<author>Deividson Developer (http://deividson.net)</author>
@@ -123,6 +123,17 @@
 					type="radio"
 					label="MOD_LIGHTBOXPAGSEGURO_SHOW_QUANTITY_LABEL"
 					description="MOD_LIGHTBOXPAGSEGURO_SHOW_QUANTITY_DESC"
+					default="1"
+					class="btn-group btn-group-yesno"
+					>
+					<option value="1">JYES</option>
+					<option value="0">JNO</option>
+				</field>
+				<field
+					name="allow_quantity_change"
+					type="radio"
+					label="MOD_LIGHTBOXPAGSEGURO_A_QUANTITY_LABEL"
+					description="MOD_LIGHTBOXPAGSEGURO_A_QUANTITY_DESC"
 					default="1"
 					class="btn-group btn-group-yesno"
 					>

@@ -31,6 +31,7 @@ $product_code = $params->get('product_code');
 $product_name = $params->get('product_name');
 $product_description = $params->get('product_description');
 $show_quantity = $params->get('show_quantity');
+$allow_quantity_change = $params->get('allow_quantity_change', '1');
 $quantity = $params->get('quantity');
 $amount = $params->get('amount');
 

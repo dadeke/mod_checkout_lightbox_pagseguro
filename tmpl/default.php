@@ -32,6 +32,7 @@ defined('_JEXEC') or die;
 	<div class="control-label">
 		<label>
 			<?php echo JText::_('MOD_LIGHTBOXPAGSEGURO_SQUANTITY_LABEL'); ?>
+			<?php if($allow_quantity_change == "1") { ?>
 			<input id="quantity<?php echo $module->id; ?>"
 				type="text"
 				class="quantity"
@@ -39,6 +40,12 @@ defined('_JEXEC') or die;
 				onkeypress="return vnumber(event);"
 				maxlength="3"
 				required />
+			<?php } else if($allow_quantity_change == "0") { ?>
+			<?php echo $quantity; ?>
+			<input id="quantity<?php echo $module->id; ?>"
+				type="hidden"
+				value="<?php echo $quantity; ?>" />
+			<?php } ?>
 		</label>
 	</div>
 </div>
