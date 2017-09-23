@@ -40,12 +40,7 @@ defined('_JEXEC') or die;
 				onkeypress="return vnumber(event);"
 				maxlength="3"
 				required />
-			<?php } else if($allow_quantity_change == "0") { ?>
-			<?php echo $quantity; ?>
-			<input id="quantity<?php echo $module->id; ?>"
-				type="hidden"
-				value="<?php echo $quantity; ?>" />
-			<?php } ?>
+			<?php } else if($allow_quantity_change == "0") { echo $quantity; } ?>
 		</label>
 	</div>
 </div>
