@@ -17,8 +17,9 @@ class JFormFieldCurrencyBRL extends JFormFieldText
 	protected function getInput() {
         $html_field = parent::getInput();
         $search_attribute = 'type="text"';
-        $replace_attribute = 'type="text" onkeypress="return vnumber(event);" ' .
-        					 'onkeyup="formata_onkeyup(event, this, MASCARA_REAL, \'D\');"';
+        $replace_attribute = 'type="text" onkeypress="return vnumber(event);" '
+                             . 'onkeyup="formata_onkeyup(event, this, MASCARA_REAL, \'D\');" '
+                             . 'onclick="this.setSelectionRange(0, this.value.length);"';
 
         $html_field = str_replace($search_attribute, $replace_attribute, $html_field);
 
