@@ -36,6 +36,12 @@
 		<fields name="params" addfieldpath="/modules/mod_checkout_lightbox_pagseguro/fields">
 			<fieldset name="basic">
 				<field
+					name="donate"
+					type="note"
+					class="alert alert-info"
+					description="MOD_LIGHTBOXPAGSEGURO_DONATE_DESC"
+				/>
+				<field
 					name="instructions"
 					type="note"
 					label="MOD_LIGHTBOXPAGSEGURO_INSTRUCTIONS_LABEL"
