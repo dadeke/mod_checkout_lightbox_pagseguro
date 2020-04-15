@@ -1,8 +1,8 @@
 <?php
 /**
  * @package Checkout Lightbox with PagSeguro
- * @author Deividson Developer
- * @copyright 2017 Deividson (deividson.net)
+ * @author Deividson Damasio
+ * @copyright 2020 Deividson (https://www.linkedin.com/in/dadeke/)
  * @license GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  */
  

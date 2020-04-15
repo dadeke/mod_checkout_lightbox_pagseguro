@@ -4,10 +4,10 @@
 	<version>1.0.5</version>
 	<creationDate>21 September 2017</creationDate>
 	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
-	<copyright>2017 Deividson</copyright>
-	<author>Deividson Developer (http://deividson.net)</author>
+	<copyright>2020 Deividson</copyright>
+	<author>Deividson Damasio (https://www.linkedin.com/in/dadeke/)</author>
 	<authorEmail>developer@deividson.net</authorEmail>
-	<authorUrl>http://deividson.net</authorUrl>
+	<authorUrl>https://www.linkedin.com/in/dadeke/</authorUrl>
 	<description>MOD_LIGHTBOXPAGSEGURO_XML_DESCRIPTION</description>
 	<files>
 		<filename module="mod_checkout_lightbox_pagseguro">helper.php</filename>
