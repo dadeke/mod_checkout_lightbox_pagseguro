@@ -74,7 +74,7 @@
 					label="MOD_LIGHTBOXPAGSEGURO_TOKEN_LABEL"
 					description="MOD_LIGHTBOXPAGSEGURO_TOKEN_DESC"
 					required="true"
-					maxlength="32"
+					maxlength="100"
 				/>
 				<field
 					name="note2"
