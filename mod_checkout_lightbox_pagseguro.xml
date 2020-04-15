@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.0" type="module" group="" method="upgrade">
 	<name>MOD_LIGHTBOXPAGSEGURO</name>
-	<version>1.0.5</version>
-	<creationDate>21 September 2017</creationDate>
+	<version>1.1.0</version>
+	<creationDate>15 April 2020</creationDate>
 	<license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
 	<copyright>2020 Deividson</copyright>
 	<author>Deividson Damasio (https://www.linkedin.com/in/dadeke/)</author>
