@@ -42,6 +42,13 @@
 					description="MOD_LIGHTBOXPAGSEGURO_INSTRUCTIONS_DESC"
 				/>
 				<field
+					name="shortcode"
+					type="shortcode"
+					label="MOD_LIGHTBOXPAGSEGURO_SHORTCODE_LABEL"
+					description="MOD_LIGHTBOXPAGSEGURO_SHORTCODE_DESC"
+					readonly="true"
+				/>
+				<field
 					name="note1"
 					type="note"
 					class="alert alert-info"
