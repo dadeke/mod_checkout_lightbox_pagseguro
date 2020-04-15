@@ -53,7 +53,7 @@
 					type="radio"
 					label="MOD_LIGHTBOXPAGSEGURO_SANDBOX_MODE_LABEL"
 					description="MOD_LIGHTBOXPAGSEGURO_SANDBOX_MODE_DESC"
-					default="1"
+					default="0"
 					class="btn-group btn-group-yesno"
 					>
 					<option value="1">JYES</option>
